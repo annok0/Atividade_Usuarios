@@ -47,7 +47,32 @@
         function criarObjetoParaEnviar(){
             
             // ESTRUTURE O OBJETO NO FORMATO JSON
+            let nome = document.getElementById("nome");
+            let sobrenome = document.getElementById("sobrenome");
+            let cpf = document.getElementById("cpf");
+            let email = document.getElementById("email");
+            let username = document.getElementById("username");
+            let senha = document.getElementById("senha");
+            let dataNascimento = document.getElementById("dataNascimento");
 
+            if ((nome instanceof HTMLInputElement) &&
+                (sobrenome instanceof HTMLInputElement) &&
+                (cpf instanceof HTMLInputElement) &&
+                (email instanceof HTMLInputElement) &&
+                (username instanceof HTMLInputElement) &&
+                (senha instanceof HTMLInputElement) &&
+                (dataNascimento instanceof HTMLInputElement)) {
+
+                    let formData = {
+                        nome: nome,
+                        sobrenome: sobrenome,
+                        cpf: cpf,
+                        email: email,
+                        username: username,
+                        senha: senha,
+                        dataNascimento: dataNascimento
+                    };
+            }
             return formData
         }
 
